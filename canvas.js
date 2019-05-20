@@ -6,12 +6,6 @@ canvas.height = window.innerHeight;
 const c = canvas.getContext('2d');
 let cage = document.getElementById('cage');
 
-//takes a context and sets outline and fill color
-function setColor(context, color) {
-    context.strokeStyle = 'black';
-    context.fillStyle = color;
-}
-
 const mouse = {
     x:0,
     y:0,
@@ -67,15 +61,14 @@ function Circle(x, y, dx, dy, radius) {
 }
 
 let circles = [];
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 2000; i++) {
     circles.push(new Circle(x + (Math.random() * innerWidth), y + (Math.random() * innerHeight), dx * Math.random() * 3, dy + Math.random() * 3, radius));
 }
 
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-    // circle.draw();
-    for (let i = 0; i < 1000; i++) { 
+    for (let i = 0; i < 2000; i++) { 
         circles[i].update();
     }
 }
