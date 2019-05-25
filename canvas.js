@@ -52,7 +52,7 @@ function Circle(x, y, dx, dy, radius) {
             }
         } else {
             if (this.radius > 5) {
-                this.radius -= 5;
+                this.radius -= 1;
             }
         }
 
